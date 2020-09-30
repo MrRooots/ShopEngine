@@ -1,0 +1,111 @@
+<!-- {% load static %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../static/styles/style.css">
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/7b52eafde7.js" crossorigin="anonymous"></script>
+
+  <!--{% block page_title %}Page Name{% endblock page_title %}-->
+  <title>
+    Renoshop |
+    {% block title %} Empty {% endblock title %}
+  </title>
+</head>
+
+<body>
+  <!-- NAVBAR SECTION START -->
+  <nav class="navbar">
+    <div class="navbarContainer">
+      <div class="logo">Renoshop<span>bee</span></div>
+      <ul class="navbarLinks">
+        <li><a href="#">home</a></li>
+        <li><a href="#">women</a></li>
+        <li><a href="#">men</a></li>
+        <li><a href="#">kids</a></li>
+        <li><a href="#">jewellery</a></li>
+        <li><a href="#">accessories</a></li>
+      </ul>
+      <ul class="navbarControl">
+        <li>
+          <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          <div class="cartCount">
+            <p>2</p>
+          </div>
+        </li>
+        <li><a href="#"><i class="fas fa-search"></i></a></li>
+        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </div>
+  </nav>  <!-- NAVBAR SECTION END -->
+
+  {% block content %}
+    Empty For Now
+  {% endblock %}
+
+  <!-- SECTION FOOTER START -->
+  <section class="footer">
+    <div class="footerContainer">
+      <div class="column">
+        <h3>information</h3>
+        <ul>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Discount</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>my account</h3>
+        <ul>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">View Cart</a></li>
+          <li><a href="#">My Wishlist</a></li>
+          <li><a href="#">Check Out</a></li>
+          <li><a href="#">Track My Order</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>F.A.Q.</h3>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="column --lastColumn">
+        <h3>contact info</h3>
+        <ul>
+          <li>
+            <i class="fas fa-globe-americas"></i>
+            <a href="#">1234 Your Address, Country</a>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <a href="#">+1 234 5678 9999</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="#">mail@domain.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION FOOTER END -->
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{% load filters %}
+
+<div class="item">
+  <div class="imageContainer">
+    <div class="image">
+      <div class="actionMenu">
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="#"><i class="fas fa-retweet"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="textContainer">
+    <a href="#">{{ item.title }}</a>
+    <p>${{ item.price }}</p>
+    <ul class="rating">
+        {% for i in ''|center:item.rating %}
+          <li><i class="fas fa-star"></i> </li>
+        {% endfor %}
+        
+        {% with 5|substract:item.rating as num %}
+          {% for i in ''|center:num %}
+            <li><i class="far fa-star"></i> </li>
+          {% endfor %}
+        {% endwith %}
+    </ul>
+  </div>
+</div>

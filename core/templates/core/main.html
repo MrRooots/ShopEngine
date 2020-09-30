@@ -1,0 +1,95 @@
+{% extends 'core/index.html' %}
+
+{% block title %}
+  Main
+{% endblock title %}
+
+{% block content %}
+  <!-- SECTION INTRO START -->
+  <section class="intro">
+    <div class="introContainer">
+      <div class="introText">
+        <h1>the best<br><span>ecommerse</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#">buy now</a>
+      </div>
+      <div class="empty"></div>
+    </div>
+  </section> <!-- SECTION INTRO END -->
+
+  <!-- BEST SELLERS SECTION START -->
+  <section class="bestsellers">
+    <div class="bestsellersContainer">
+      <div class="itemInfo">
+        <h3>best sellers</h3>
+        <p class="greenpar">The best product from us</p>
+        <p class="blackpar">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.</p>
+      </div>
+      
+      {% for item in bestsellers %}
+        {% include 'core/includes/item.html' %}
+      {% endfor %}
+
+    </div>
+    <div class="servicesContainer">
+      <div class="item">
+        <img src="../static/img/diamond.png" alt="">
+        <h3>special offers</h3>
+        <p>Shop Big Save Big</p>
+      </div>
+      <div class="item">
+        <img src="../static/img/plane.png" alt="">
+        <h3>free delivery</h3>
+        <p>On Orders Above $99</p>
+      </div>
+      <div class="item">
+        <img src="../static/img/share.png" alt="">
+        <h3>30 days return</h3>
+        <p>Policy We Offers</p>
+      </div>
+      <div class="item">
+        <img src="../static/img/rocket.png" alt="">
+        <h3>fastest shipping</h3>
+        <p>2 Days Express</p>
+      </div>
+    </div>
+  </section> <!-- BEST SELLERS SECTION END -->
+
+  <!-- FEATURED PRODUCTS SECTION STARN -->
+  <section class="featured">
+    <div class="featuredContainer">
+      <h1>featured products</h1>
+      <p class="featuredpar">Newest trends from top brands</p>
+      <div class="featuredGrid">
+        {% for item in best_items %}
+          {% include 'core/includes/item.html' %}
+        {% endfor %}
+      </div>
+        
+    </div>
+  </section>  <!-- FEATURED PRODUCTS SECTION END -->
+
+  <!-- SUBSCRIBTION SECTION START -->
+  <section class="lastblock">
+    <div class="left">
+      <div class="leftContainer">
+        <h1>Get Out Special Discount</h1>
+        <p>Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim aliquet quam. register your email for news and special offers</p>
+        <form action="POST">
+          <input type="email" placeholder="E-mail address ...">
+          <a href="#">get coupon now</a>
+        </form>
+      </div>
+    </div>
+    <div class="right">
+      <div class="rightContainer">
+        <img src="../static/img/logo1.png" alt="">
+        <img src="../static/img/logo2.png" alt="">
+        <img src="../static/img/logo3.png" alt="">
+        <img src="../static/img/logo4.png" alt="">
+      </div>
+    </div>
+  </section>  <!-- SUBSCRIBTION SECTION END -->
+
+{% endblock content %}  
